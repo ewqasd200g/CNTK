@@ -1442,6 +1442,8 @@ namespace CNTK
             case DataType::Float16:
                 computationNodePtr = CreateComputationNode<half>(variable, function, inputNodes, network, variableToNodeMap, useMangledNamesForComputationNodes);
                 break;
+            default:
+                RuntimeError("Unsupported variable data type for CreateComputationNode");
             }
         }
 
