@@ -80,4 +80,4 @@ def test_rnn(device_id):
         z = C.optimized_rnnstack(embed, W, hidden_dim, num_layers)
 
     feed = np.floor(np.random.rand(batch_size, sequence_len).astype(np.float32) * (vocab_dim - 1))
-    z.grad(feed, wrt=z.parameters)        
+    z.grad(feed, wrt=z.parameters)
